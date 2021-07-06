@@ -7,6 +7,7 @@ const babel = require('gulp-babel')
 const replace = require('gulp-replace')
 const del = require('del')
 const sync = require('browser-sync')
+const imagemin = require('gulp-imagemin')
 const autoPrefixer = require('gulp-autoprefixer')
 
 // HTML
@@ -46,6 +47,21 @@ function scripts() {
     .pipe(sync.stream())
 }
 
+// IMG MIN
+
+function imgmin() {
+  return src('src/img/*')
+    .pipe(imagemin())
+    .pipe(dest('build/img/'))
+}
+
+// FONTS
+
+function fonts() {
+  return src('src/fonts/*')
+    .pipe(dest('build/fonts/'))
+}
+
 function clean() {
   return del('build')
 }
@@ -63,7 +79,7 @@ function serve() {
 // ** EXPORTS **
 exports.build = series(
   clean,
-  parallel(html, styles, scripts)
+  parallel(html, styles, scripts, imgmin, fonts)
 )
 
 exports.serve = series(
