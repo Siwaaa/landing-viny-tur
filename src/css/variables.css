@@ -1,3 +1,7 @@
 :root {
   --bgcolor: #fff;
+  --content-width: 1160px;
+  --fz: 16px;
+  --fz-small: 14px;
+  --accent-color: #fea753;
 }

@@ -1,15 +1,11 @@
 {
-  "name": "landing-agency-hr",
+  "name": "landing-vinnytur",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "gulp serve",
     "build": "gulp build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Siwaaa/landing-agency-hr.git"
   },
   "keywords": [],
   "author": "",
@@ -30,5 +26,8 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-replace": "^1.1.3",
     "gulp-sass": "^5.0.0"
+  },
+  "dependencies": {
+    "swiper": "^6.7.5"
   }
 }

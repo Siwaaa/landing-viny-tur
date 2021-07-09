@@ -5,15 +5,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/main.css" />
-  <title>Document</title>
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+
+  <title>Винный тур по лучшим винодельням Краснодарского края</title>
 </head>
-<body>
-  @include('blocks/navbar.html')
+<body class="body">
   
   <main>
   @include('blocks/header.html')
+  @include('blocks/for_whom.html')
+  @include('blocks/enabled.html')
+  @include('blocks/programs.html')
   </main>
 
   @include('blocks/footer.html')
+  <script src="/js/index.js"></script>
+  <script src="/js/swiper-bundle.min.js" ></script>
+  <script src="/js/swiper.js" type="module"></script>
 </body>
 </html>

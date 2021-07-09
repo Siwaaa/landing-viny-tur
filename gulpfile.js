@@ -58,7 +58,7 @@ function imgmin() {
 // FONTS
 
 function fonts() {
-  return src('src/fonts/*')
+  return src('src/fonts/**/*')
     .pipe(dest('build/fonts/'))
 }
 
@@ -84,6 +84,6 @@ exports.build = series(
 
 exports.serve = series(
   clean,
-  parallel(html, styles, scripts),
+  parallel(html, styles, scripts, imgmin, fonts),
   serve
 )
