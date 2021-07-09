@@ -54,9 +54,13 @@ button, input, optgroup, select, textarea {
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
+  background: transparent;
 }
 button, input {
+  border: none;
+  outline: none;
   overflow: visible;
+  border-radius: 0;
 }
 button, select {
   text-transform: none;
