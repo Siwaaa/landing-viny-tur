@@ -204,8 +204,8 @@
   font-family: Montserrat;
   src: local('Montserrat'), 
     local('Montserrat-Regular'), 
-    url(../fonts/Monstr/montserrat.woff2) format('woff2'), 
-    url(../fonts/Monstr/montserrat.woff) format('woff');
+    url(../fonts/Monstr/Montserrat-Regular.woff2) format('woff2'), 
+    url(../fonts/Monstr/Montserrat-Regular.woff) format('woff');
   font-weight: 400;
   font-style: normal;
 }

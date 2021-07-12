@@ -62,6 +62,11 @@ function fonts() {
     .pipe(dest('build/fonts/'))
 }
 
+function assets() {
+  return src('src/assets/*')
+  .pipe(dest('build/assets/'))
+}
+
 function clean() {
   return del('build')
 }
@@ -79,7 +84,7 @@ function serve() {
 // ** EXPORTS **
 exports.build = series(
   clean,
-  parallel(html, styles, scripts, imgmin, fonts)
+  parallel(html, styles, scripts, imgmin, fonts, assets)
 )
 
 exports.serve = series(

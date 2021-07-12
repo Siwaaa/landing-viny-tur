@@ -1,18 +1,18 @@
 <section class="oplata-forma">
-  <div class="oplata">
+  <div class="oplata" id="oplata">
     <div class="oplata__container container">
       <div class="oplata__body">
         <div class="oplata__body-content">
-          <div class="oplata__prices">
+          <div class="oplata__prices" data-animate-on-scroll>
             <div class="oplata__prices-item">
               <h3>Стоимость тура</h3>
               <span>55 500 ₽</span>
-              <a href="" class="btn header__btn">ПРИОБРЕСТИ ТУР</a>
+              <button href="" class="btn header__btn" id="btn2">ПРИОБРЕСТИ ТУР</button>
             </div>
             <div class="oplata__prices-item">
               <h3>Бронь места</h3>
               <span>190 ₽</span> 
-              <a href="" class="btn header__btn">ВНЕСТИ ПРЕДОПЛАТУ</a>
+              <button class="btn btn--gray header__btn" id="btn3">ВНЕСТИ ПРЕДОПЛАТУ</button>
             </div>
             <img src="./img/bilet.png" alt="" class="oplata__prices-img">
           </div>
@@ -29,12 +29,12 @@
   
       <div class="forma__body">
         <div class="forma__body-content">
-          <form action="" class="forma-form">
+          <form action="" class="forma-form" data-animate-on-scroll>
             <input type="text" placeholder="Введите имя" class="input">
             <input type="tel" placeholder="Введите номер телефона" class="input">
             <div class="submit">
-              <button type="submit" class="btn header__btn">СВЯЗАТЬСЯ С МЕНЕДЖЕРОМ</button>
-              <p>Нажимая на кнопку вы соглашаетесь с условиями обработки данных и политикой конфиденциальности</p>
+              <button type="submit" class="btn header__btn" >СВЯЗАТЬСЯ С МЕНЕДЖЕРОМ</button>
+              <p>Нажимая на кнопку вы соглашаетесь с условиями обработки данных и <a href="" class="forma-policy">политикой конфиденциальности</a> </p>
             </div>
           </form>
         </div>
