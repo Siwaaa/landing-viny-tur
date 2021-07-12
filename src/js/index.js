@@ -133,7 +133,7 @@ const t = new IntersectionObserver((e=>{
   }
   ))
 }),{
-  threshold: .4
+  threshold: 0.25
 });
 
 e.forEach((e=>{

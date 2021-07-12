@@ -833,6 +833,7 @@ p > b {
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+  cursor: pointer;
 }
 .modal-content {
   background-color: #fefefe;
@@ -843,6 +844,7 @@ p > b {
   width: 500px; 
   max-width: 500px;
   height: auto;
+  cursor: auto;
 }
 .modal-content__body::after {
   content: "";
@@ -1282,15 +1284,21 @@ p > b {
 }
 
 /* Animation */
+*[data-animate-on-scroll] {
+  opacity: 0;
+}
 *[data-animate-on-scroll=animated] {
-  animation: wipe-enter 1.2s;
+  opacity: 1;
+  animation: wipe-enter 2s;
 }
 
 @keyframes wipe-enter {
   0% {
-    transform: translate(0, -20%);
+    opacity: 0;
+    transform: translate(0, -20px);
   }
   100% {
+    opacity: 1;
     transform: translate(0);
   }
 }
