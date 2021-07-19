@@ -139,8 +139,8 @@ const sentToServer = dataForm => {
   fetch(url + new URLSearchParams(dataForm), {
     method: 'GET',
     mode: 'no-cors'
-  }).then(response => {
-    response.ok ? alert('Заявка успешно отправлена') : false;
+  }).then(() => {
+    alert('Заявка успешно отправлена');
   }).catch(() => {
     alert('Данные не отправлены на сервер');
   });
