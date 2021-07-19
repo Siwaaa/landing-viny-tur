@@ -132,4 +132,57 @@ const t = new IntersectionObserver(e => {
 });
 e.forEach(e => {
   t.observe(e);
+}); // FORMA
+
+const sentToServer = dataForm => {
+  const url = 'https://script.google.com/macros/s/AKfycbwgLzEDH0cyt-knUGxw_6w456O9RPEcLlomBxv0nFU1WuSdn1lo1e5zUicmhcp5C_J6oA/exec?';
+  fetch(url + new URLSearchParams(dataForm), {
+    method: 'GET',
+    mode: 'no-cors'
+  }).then(response => {
+    response.ok ? alert('Заявка успешно отправлена') : false;
+  }).catch(() => {
+    alert('Данные не отправлены на сервер');
+  });
+};
+
+const forms = document.querySelectorAll('form');
+forms.forEach(el => {
+  el.addEventListener('submit', e => {
+    const data = {};
+    const inputs = el.querySelectorAll('input');
+    inputs.forEach(el => {
+      switch (el.name) {
+        case "name":
+          data.name = el.value;
+          break;
+
+        case "tel":
+          data.tel = el.value;
+          break;
+
+        case "email":
+          data.email = el.value;
+          break;
+
+        case "perezvon":
+          data.type = "Форма: перезвонить";
+          break;
+
+        case "pokupka":
+          data.type = "Форма: покупка";
+          break;
+
+        case "bron":
+          data.type = "Форма: бронь";
+          break;
+
+        default:
+          break;
+      }
+    });
+    sentToServer(data);
+    console.log(data);
+    e.preventDefault();
+  });
 });
