@@ -140,7 +140,7 @@ const sentToServer = dataForm => {
     method: 'GET',
     mode: 'no-cors'
   }).then(() => {
-    alert('Заявка успешно отправлена');
+    window.location.href = "https://belovamore.ru/thanks.html";
   }).catch(() => {
     alert('Данные не отправлены на сервер');
   });
