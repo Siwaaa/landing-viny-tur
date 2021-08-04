@@ -4,7 +4,7 @@
     use YooKassa\Client;
 
     $client = new Client();
-    $client->setAuth('824768', 'test_eIxAiHPtcb0XEjqQ-hTMHbl7EuH76GJeyCgov_lwWzc');
+    $client->setAuth('822095', 'live_ZesW239CvM4I90Nw_GLbId-FJZ2tdwMt0d8J82hvpPQ');
     try {
         $payment = $client->createPayment(
             array(
