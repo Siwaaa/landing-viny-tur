@@ -140,7 +140,22 @@ const sentToServer = dataForm => {
     method: 'GET',
     mode: 'no-cors'
   }).then(() => {
-    window.location.href = "https://belovamore.ru/thanks.html";
+    switch (dataForm.type) {
+      case "Форма: перезвонить":
+        window.location.href = "https://belovamore.ru/thanks.html";
+        break;
+
+      case "Форма: покупка":
+        window.location.href = "https://belovamore.ru/payments-full.php";
+        break;
+
+      case "Форма: бронь":
+        window.location.href = "https://belovamore.ru/payments.php";
+        break;
+
+      default:
+        break;
+    }
   }).catch(() => {
     alert('Данные не отправлены на сервер');
   });
